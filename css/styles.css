@@ -1,0 +1,122 @@
+:root {
+  --purple: #7b2ff7;
+  --light-purple: #d7b4f2;
+  --lighter-purple: #e7d9f7; 
+  --white: #ffffff;
+  --input-icon-color: #5a2bb9; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dbc7fa, #a588f9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Common styles for both forms */
+.forms {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px -10px rgba(123, 47, 247, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 80px;
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+}
+
+/* LOGIN  styles */
+.login {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+/* SIGN UP  styles */
+.signup {
+   background-color: var(--white);
+   color: var(--purple);
+   box-shadow: 0 10px 25px -10px rgba(123, 47, 247, 0.25);
+}
+h1{
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  text-align: center;
+}
+p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+  margin-bottom: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: var(--lighter-purple);
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+}
+.login .input-group {
+  background-color: var(--light-purple);
+}
+.fa-solid{
+  color: var(--input-icon-color);
+  margin-right: 12px;
+}
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-size: 1rem;
+  width: 100%;
+  font-weight: 600;
+}
+input::placeholder {
+  color: var(--input-icon-color);
+  font-weight: 500;
+  opacity: 0.8;
+}
+button {
+  border-radius: 30px;
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 100%;
+  user-select: none;
+}
+.login button {
+  background-color: var(--white);
+  color: var(--purple);
+}
+.login button:hover {
+  background-color: #f2eafd;
+}
+.signup button {
+  background-color: var(--purple);
+  color: var(--white);
+}
+.signup button:hover {
+   background-color: #6c26d8;
+ }
