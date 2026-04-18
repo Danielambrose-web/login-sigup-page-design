@@ -10,8 +10,11 @@ const LogingSignup = () => {
 
   return (
     <div>
-      <div className="container">
-        <div className="header">
+      <div
+        className="container"
+        style={{ backgroundColor: action === "Login" ? "var(--white)" : "var(--purple)" }}
+      >
+        <div className={action === "Login" ? "login" : "signup"}>
           <h1>{action}</h1>
         </div>
         {action === "Login" ? (

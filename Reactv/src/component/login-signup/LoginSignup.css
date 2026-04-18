@@ -31,7 +31,7 @@ body {
   position: relative;
   overflow: hidden;
   min-height: 480px;
-  background-color: var(--purple);
+  /* background-color: var(--purple); */
   color: var(--white);
 }
 
@@ -44,6 +44,16 @@ h1 {
   text-transform: uppercase;
   text-align: center;
 }
+.signup {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.login {
+   background-color: var(--white);
+   color: var(--purple);
+
+} 
 .input-group {
   display: flex;
   align-items: center;
@@ -133,11 +143,11 @@ button {
 .forgetPassword h4 {
   font-weight: 500;
   font-size: 0.95rem;
-  color: #f7efff;
+  color: var(--purple);
 }
 
 .forgetPassword a {
-  color: #ffffff;
+  color: #0813a3;
   margin-left: 8px;
   text-decoration: none;
   font-weight: 700;
