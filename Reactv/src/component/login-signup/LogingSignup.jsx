@@ -46,13 +46,32 @@ const LogingSignup = () => {
             required
           />
         </div>
-        {action==='SignUp'?<div></div>:<div className="forgetPassword">
-          <h4>Forget Password <span><a href="">clickhere</a></span></h4>
-        </div>}
-        
+        {action === "SignUp" ? (
+          <div></div>
+        ) : (
+          <div className="forgetPassword">
+            <h4>
+              Forget Password{" "}
+              <span>
+                <a href="">clickhere</a>
+              </span>
+            </h4>
+          </div>
+        )}
+
         <div className="buttons">
-          <button onClick={() => setAction("SignUp")}>SignUp</button>
-          <button onClick={() => setAction("Login")}>Login</button>
+          <button
+            className={action === "SignUp" ? "active" : "inactive"}
+            onClick={() => setAction("SignUp")}
+          >
+            SignUp
+          </button>
+          <button
+            className={action === "Login" ? "active" : "inactive"}
+            onClick={() => setAction("Login")}
+          >
+            Login
+          </button>
         </div>
       </div>
     </div>
