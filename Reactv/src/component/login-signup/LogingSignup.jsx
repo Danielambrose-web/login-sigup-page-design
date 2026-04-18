@@ -14,10 +14,20 @@ const LogingSignup = () => {
         <div className="header">
           <h1>{action}</h1>
         </div>
-        <div className="input-group">
-          <img src={Person} alt="" />
-          <input id="login-email" type="text" placeholder="someone" required />
-        </div>
+        {action === "Login" ? (
+          <div></div>
+        ) : (
+          <div className="input-group">
+            <img src={Person} alt="" />
+            <input
+              id="login-email"
+              type="text"
+              placeholder="someone"
+              required
+            />
+          </div>
+        )}
+
         <div className="input-group">
           <img src={Email} alt="" />
           <input
@@ -36,8 +46,12 @@ const LogingSignup = () => {
             required
           />
         </div>
+        {action==='SignUp'?<div></div>:<div className="forgetPassword">
+          <h4>Forget Password <span><a href="">clickhere</a></span></h4>
+        </div>}
+        
         <div className="buttons">
-          <button onClick={() => setAction("Signup")}>SignUp</button>
+          <button onClick={() => setAction("SignUp")}>SignUp</button>
           <button onClick={() => setAction("Login")}>Login</button>
         </div>
       </div>
